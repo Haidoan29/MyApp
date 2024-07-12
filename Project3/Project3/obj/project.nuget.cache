@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "aCFeVAgTWESzDzSRz6Pj5PPhH5vSMZJhxCS5XP6X9JQNPB+v4kFZ9yPVtUrQJ5zWL+4wt7+LzK6OlzspESaP0A==",
+  "dgSpecHash": "Bazz2xW7l3vi+pKBs3tSRJGN2YDc5BKNByyItwQ4So4ELeBF0tZLguWV8uEW4lmMCETz85Ebq6wnfBpzmMAbBg==",
   "success": true,
-  "projectFilePath": "E:\\project3\\Project3\\Project3\\Project3.csproj",
+  "projectFilePath": "E:\\MyApp\\Project3\\Project3\\Project3.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
@@ -90,5 +90,16 @@
     "C:\\Users\\Admin\\.nuget\\packages\\z.entityframework.plus.efcore\\7.101.2\\z.entityframework.plus.efcore.7.101.2.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\z.expressions.eval\\6.0.6\\z.expressions.eval.6.0.6.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'System.Text.Json' 8.0.3 has a known high severity vulnerability, https://github.com/advisories/GHSA-hh2w-p6rv-4g7w",
+      "libraryId": "System.Text.Json",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    }
+  ]
 }

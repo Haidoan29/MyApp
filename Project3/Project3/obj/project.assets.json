@@ -4312,11 +4312,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\project3\\Project3\\Project3\\Project3.csproj",
+      "projectUniqueName": "E:\\MyApp\\Project3\\Project3\\Project3.csproj",
       "projectName": "Project3",
-      "projectPath": "E:\\project3\\Project3\\Project3\\Project3.csproj",
+      "projectPath": "E:\\MyApp\\Project3\\Project3\\Project3.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "E:\\project3\\Project3\\Project3\\obj\\",
+      "outputPath": "E:\\MyApp\\Project3\\Project3\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -4416,5 +4416,17 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'System.Text.Json' 8.0.3 has a known high severity vulnerability, https://github.com/advisories/GHSA-hh2w-p6rv-4g7w",
+      "libraryId": "System.Text.Json",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    }
+  ]
 }

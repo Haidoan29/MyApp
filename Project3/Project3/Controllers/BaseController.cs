@@ -38,7 +38,7 @@ namespace Project3.Controllers
         }
         [Authorize(Roles = "ADMIN , SUBADMIN , CUSTOMER")]
         [HttpGet("GetById/{id}")]
-        public async Task<ActionResult<CustomerController>> GetById(int id)
+        public async Task<ActionResult<ForgotPasswordController>> GetById(int id)
         {
             var result = await (_repository.GetById(id));
             return Ok(result);
@@ -46,7 +46,7 @@ namespace Project3.Controllers
         //[Authorize(Roles = "ADMIN , SUBADMIN")]
         [HttpPost]
         [Route("Create")]
-        public async Task<ActionResult<CustomerController>> Create(T entity)
+        public async Task<ActionResult<ForgotPasswordController>> Create(T entity)
         {
             var result = await _repository.Create(entity);
             return Ok(result);
@@ -54,7 +54,7 @@ namespace Project3.Controllers
         [Authorize(Roles = "ADMIN , SUBADMIN")]
         [HttpPut]
         [Route("Update")]
-        public async Task<ActionResult<CustomerController>> Update(T entity)
+        public async Task<ActionResult<ForgotPasswordController>> Update(T entity)
         {
             var result = await (_repository.Update(entity));
             return Ok(result);

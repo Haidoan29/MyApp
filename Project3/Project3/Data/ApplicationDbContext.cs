@@ -3,8 +3,7 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Project3.Models;
 
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
-using Transaction = Project3.Models.Transaction;
+
 
 namespace Project3.Data
 {
@@ -18,20 +17,7 @@ namespace Project3.Data
 
             //this.Data();
         }
-        public virtual DbSet<Customer> Customers { get; set; }
-        public virtual DbSet<Cancellation> Cancellations { get; set; }
-        public virtual DbSet<CancellationFeeRule> CancellationFeeRules { get; set; }
-        public virtual DbSet<DailyCashTransaction> DailyCashTransactions { get; set; }
-        public virtual DbSet<DayMaster> DayMasters { get; set; }
-        public virtual DbSet<FareRule> FareRules { get; set; }
-        public virtual DbSet<Train> Trains { get; set; }
-        public virtual DbSet<TrainSchedule> TrainSchedules { get; set; }
-        public virtual DbSet<ReservationSuperFastFee> ReservationSuperFastFees { get; set; }
-        public virtual DbSet<Seat> Seats { get; set; }
-        public virtual DbSet<Transaction> Transactions { get; set; }
-        public virtual DbSet<MyRouter> MyRouters { get; set; }
-        public virtual DbSet<Station> Stations { get; set; }
-        public virtual DbSet<Class> Classes { get; set; }
+       
 
 
 
