@@ -3,7 +3,7 @@ import 'package:http/http.dart' as http;
 
 
 class ApiService {
-  final String apiUrl = "https://api.doluuniem.site/api/Authentications/Login"; // Địa chỉ IP cục bộ của máy chủ
+  final String apiUrl = "https://103.179.190.105:5001/api/Auth"; // Địa chỉ IP cục bộ của máy chủ
 
   Future<Map<String, dynamic>> login(String username, String password) async {
     final response = await http.post(
