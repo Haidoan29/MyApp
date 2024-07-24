@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "E:\\MyApp\\Project3\\Project3\\Project3.csproj": {}
+    "/root/MyApp/Project3/Project3/Project3.csproj": {}
   },
   "projects": {
-    "E:\\MyApp\\Project3\\Project3\\Project3.csproj": {
+    "/root/MyApp/Project3/Project3/Project3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\MyApp\\Project3\\Project3\\Project3.csproj",
+        "projectUniqueName": "/root/MyApp/Project3/Project3/Project3.csproj",
         "projectName": "Project3",
-        "projectPath": "E:\\MyApp\\Project3\\Project3\\Project3.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "E:\\MyApp\\Project3\\Project3\\obj\\",
+        "projectPath": "/root/MyApp/Project3/Project3/Project3.csproj",
+        "packagesPath": "/root/.nuget/packages/",
+        "outputPath": "/root/MyApp/Project3/Project3/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/root/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -34,6 +32,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -100,6 +103,20 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.linux-x64",
+              "version": "[7.0.20, 7.0.20]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -108,7 +125,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.303/RuntimeIdentifierGraph.json"
         }
       }
     }
