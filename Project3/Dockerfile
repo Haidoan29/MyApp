@@ -18,6 +18,7 @@ RUN dotnet build "Project3.csproj" -c Release -o /app/build
 
 FROM build AS publish
 ARG BUILD_CONFIGURATION=Release
+RUN dotnet dev-certs https --trust
 RUN dotnet publish "Project3.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
 
 FROM base AS final
@@ -25,5 +26,5 @@ WORKDIR /app
 COPY --from=publish /app/publish .
 #COPY ./aspnetapp.pfx ./aspnetapp.pfx
 #RUN chmod 644 ./aspnetapp.pfx
-RUN dotnet dev-certs https --trust
+
 ENTRYPOINT ["dotnet", "Project3.dll"]
