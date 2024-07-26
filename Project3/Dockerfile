@@ -23,5 +23,5 @@ RUN dotnet publish "Project3.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-COPY ${HOME}/.aspnet/https/aspnetapp.pfx ./aspnetapp.pfx
+COPY ./aspnetapp.pfx ./aspnetapp.pfx
 ENTRYPOINT ["dotnet", "Project3.dll"]
