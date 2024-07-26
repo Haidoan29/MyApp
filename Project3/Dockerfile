@@ -25,4 +25,5 @@ WORKDIR /app
 COPY --from=publish /app/publish .
 COPY ./aspnetapp.pfx ./aspnetapp.pfx
 #RUN chmod 644 ./aspnetapp.pfx
+RUN dotnet dev-certs https --trust
 ENTRYPOINT ["dotnet", "Project3.dll"]
