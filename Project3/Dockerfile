@@ -14,6 +14,9 @@ RUN dotnet restore "Project3.csproj"
 #COPY . ./Project3
 #WORKDIR "/src/."
 COPY ["Project3/", "./"]
+RUN dotnet dev-certs https -ep /app/build/aspnetapp.pfx -p Abc123456789
+RUN dotnet dev-certs https --trust
+
 RUN dotnet build "Project3.csproj" -c Release -o /app/build
 #RUN dotnet build "./Project3.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
