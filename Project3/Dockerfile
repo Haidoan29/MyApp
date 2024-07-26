@@ -20,8 +20,10 @@ FROM build AS publish
 ARG BUILD_CONFIGURATION=Release
 RUN dotnet dev-certs https --trust
 RUN dotnet publish "Project3.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
+COPY --from=build /root/.aspnet/https/project3.pfx /app/project3.pfx
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "Project3.dll"]
+ENTRYPOINT ["dotnet", "Project3.dll", "--server.https=true", "--server.urls=https://0.0.0.0:5001"]
+
