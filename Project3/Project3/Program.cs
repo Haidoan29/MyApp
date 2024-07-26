@@ -124,6 +124,8 @@ app.Run();
 /*
 run this on local PC:
 dotnet dev-certs https -ep ./aspnetapp.pfx -p "Abc123456789"
+chmod 644 ./aspnetapp.pfx
+chown $USER ./aspnetapp.pfx
 dotnet dev-certs https --trust
 
 */
