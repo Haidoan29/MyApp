@@ -1,5 +1,3 @@
-#See https://aka.ms/customizecontainer to learn how to customize your debug container and how Visual Studio uses this Dockerfile to build your images for faster debugging.
-
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 USER app
 WORKDIR /app
@@ -14,8 +12,6 @@ RUN dotnet restore "Project3.csproj"
 #COPY . ./Project3
 #WORKDIR "/src/."
 COPY ["Project3/", "./"]
-RUN dotnet dev-certs https -ep /app/build/aspnetapp.pfx -p Abc123456789
-RUN dotnet dev-certs https --trust
 
 RUN dotnet build "Project3.csproj" -c Release -o /app/build
 #RUN dotnet build "./Project3.csproj" -c $BUILD_CONFIGURATION -o /app/build
@@ -27,4 +23,5 @@ RUN dotnet publish "Project3.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
+COPY ${HOME}/.aspnet/https/aspnetapp.pfx ./aspnetapp.pfx
 ENTRYPOINT ["dotnet", "Project3.dll"]

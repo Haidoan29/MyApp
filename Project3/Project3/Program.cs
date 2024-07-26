@@ -120,3 +120,10 @@ app.MapControllerRoute(
 app.MapRazorPages();
 
 app.Run();
+
+/*
+run this on local PC:
+dotnet dev-certs https -ep ${HOME}/.aspnet/https/aspnetapp.pfx -p "Abc123456789"
+dotnet dev-certs https --trust
+
+*/
