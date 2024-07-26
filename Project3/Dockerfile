@@ -24,4 +24,5 @@ FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
 COPY ./aspnetapp.pfx ./aspnetapp.pfx
+RUN chmod 644 ./aspnetapp.pfx
 ENTRYPOINT ["dotnet", "Project3.dll"]
